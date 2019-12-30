@@ -38,7 +38,7 @@ m = map(p,0,1023,90,0);
 
 so that the values of the potentiometer go from -100 to 100 and the needle's gauge goes from 0 to 90 (this is a trick to draw the needle in the correct position, try yourself if you are curious).
 
-The python script includes the host address and the serial port number. The host should be `"localhost"` (if it doesn't work, try with 127.0.0.1), the port any (maybe it is better one not in use by other applications, I don't know), the serial port where your board is connected may be read from the Arduino IDE. In my case, it is `"COM4"`. Note: if you test the Arduino with the serial monitor, you may have to disconnect and re-connect your board before executing the python script in order tomakeit work properly.
+The python script includes the host address and the serial port number. The host should be `"localhost"` (if it doesn't work, try with 127.0.0.1), the port any (maybe it is better one not in use by other applications, I don't know), the serial port where your board is connected may be read from the Arduino IDE. In my case, it is `"COM4"`. **If you test the Arduino with the serial monitor, you may have to disconnect and re-connect your board before executing the python script in order tomakeit work properly.**
 
 ```
 host = "localhost"
@@ -56,11 +56,20 @@ The python script may be located anywhere. You may execute it from the command l
 
 This may be launched before or even after starting FlightGear.
 
-Finally, as previously stated, the XML script must be moved once for all in the protocol folder of your FlightGear installation. Now you are ready to go. Launch FlightGear with your preferred mode (command line or launcher) by adding the following command (no space between chars!):
+Finally, as previously stated, the XML script must be moved once for all in the protocol folder of your FlightGear installation. Now you are ready to go. Launch FlightGear with your preferred mode (command line or launcher) by adding the following command **with no space between chars!**:
 
 `--generic=socket,in,30,localhost,21567,udp,arduinoElevatorTrim`
 
 where we are telling FlightGear to apply a generic protocol via socket, read input 30 times per second, on the address localhost, port 21567, UDP protocol, instructions in the arduinoElevatorTrim.xml file. Enjoy your personal trim wheel!
+
+### arduinoElevatorTrimOLED.ino
+This is the script to load on the Arduino board. Adjust line 16 (type of display) as needed.
+
+### arduinoElevatorTrim.py
+This is the script to be executed along with FlightGear to "translate" serial communication into UDP packets. You need Python installed in order to execute this script. Modify line 14 (USB port where the Arduino is connected) as needed.
+
+### arduinoElevatorTrim.xml
+this is the script to add in the folder <FlightGearRoot>/data/Protocol.
 
 ## External sources
 [Oled gauge graphics by pakganern](https://steemit.com/utopian-io/@pakganern/oled-display-gauge-meter-using-potentiometer-arduino)
