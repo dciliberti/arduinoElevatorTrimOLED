@@ -65,6 +65,6 @@ where we are telling FlightGear to apply a generic protocol via socket, read inp
 ## External sources
 [Oled gauge graphics by pakganern](https://steemit.com/utopian-io/@pakganern/oled-display-gauge-meter-using-potentiometer-arduino)
 
-[This device on the Arduino Project Hub](https://create.arduino.cc/projecthub/dancili/flightgear-analog-trim-tab-wheel)
+[This device on the Arduino Project Hub](https://create.arduino.cc/projecthub/dancili/flightgear-analog-trim-tab-wheel-f104b8?ref=user&ref_id=238025&offset=1)
 
 [Video demonstration](https://youtu.be/hvd_2HRwMwk)
