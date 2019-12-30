@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<generic>
+    <input>   
+        <line_separator>\n</line_separator>
+        <var_separator>,</var_separator>
+   
+        <chunk>
+            <name>Elevator trim</name>
+            <node>/controls/flight/elevator-trim</node>
+            <type>float</type>
+        </chunk>
+ 
+    </input>
+</generic>
+
+</PropertyList>
